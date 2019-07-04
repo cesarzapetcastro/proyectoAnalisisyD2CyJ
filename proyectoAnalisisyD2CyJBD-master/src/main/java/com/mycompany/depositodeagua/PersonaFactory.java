@@ -25,6 +25,9 @@ public class PersonaFactory implements PersonaFactoryMethod{
 else if (rango==2){
             return new PersonaBodeguero(nombres, Apellidos, 0, 0, direccion, 0);
                     }
+else if (rango==3){
+            return new administrador(nombres, Apellidos, edad, telefono, direccion, rango);
+                    }
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     }
