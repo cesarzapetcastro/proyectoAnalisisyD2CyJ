@@ -5,8 +5,6 @@
  */
 package Clases;
 
-import Interfaces.PersonaFactoryMethod;
-
 
 
 /**
@@ -16,10 +14,17 @@ import Interfaces.PersonaFactoryMethod;
 public class PersonaFactory implements PersonaFactoryMethod{
 
     @Override
-    public Persona crearPersona(String nombres, String Apellidos, int edad, int telefono, String direccion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Persona crearPersona(String nombres, String Apellidos, int edad, int telefono, String direccion, int rango) {
+            if (rango==1){
+        return new PersonaVendedor(nombres, Apellidos, 0, 0, direccion, 0);
+    }
+else if (rango==2){
+            return new PersonaBodeguero(nombres, Apellidos, 0, 0, direccion, 0);
+                    }
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     }
 
    
     
-}
+

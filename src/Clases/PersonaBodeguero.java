@@ -11,8 +11,13 @@ package Clases;
  */
 public class PersonaBodeguero extends Persona{
     
-    public PersonaBodeguero(String nombres, String Apellidos, int edad, int telefono, String direccion) {
-        super(nombres, Apellidos, edad, telefono, direccion);
+    public PersonaBodeguero(String nombres, String Apellidos, int edad, int telefono, String direccion,int rango) {
+        super(nombres, Apellidos, edad, telefono, direccion, rango);
+    }
+
+    @Override
+    public String getDescripcion() {
+                return "se creo una persona bodeguero";
     }
     
 }
