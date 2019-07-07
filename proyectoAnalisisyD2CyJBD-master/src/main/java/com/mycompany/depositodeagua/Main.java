@@ -28,6 +28,9 @@ public class Main {
         PersonaFactoryMethod fabrica = new PersonaFactory ();
         Persona persona = fabrica.crearPersona("cesar", "zapet", 0, 0, "direccion",2);
         System.out.println(persona.getDescripcion());
+        ProveedorFactoryMethod fabrica1 = new ProveedorFactory ();
+        Proveedor proveedor = fabrica1.crearProveedor("cesar", "SAN MARCOS","1234567","OBSERVACION","minorista");
+        System.out.println(proveedor.getDescripcion());
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("depositoagua");
         EntityManager em = emf.createEntityManager();
