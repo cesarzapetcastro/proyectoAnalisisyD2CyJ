@@ -4,18 +4,22 @@
  * and open the template in the editor.
  */
 package com.mycompany.depositodeagua;
-
+import com.mycompany.depositodeagua.Persona;
+import com.mycompany.depositodeagua.Persona;
 /**
  *
  * @author Jorge
  */
-public class administrador {
+public class administrador extends Persona{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public administrador(String nombres, String Apellidos, int edad, int telefono, String direccion, String rango) {
+        super(nombres, Apellidos, edad, telefono, direccion, rango);
     }
+
+    @Override
+    public String getDescripcion() {
+        return "se creo un Adminstrador"; //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }

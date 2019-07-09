@@ -18,12 +18,17 @@ import com.mycompany.depositodeagua.Persona;
 public class PersonaFactory implements PersonaFactoryMethod{
 
     @Override
-    public Persona crearPersona(String nombres, String Apellidos, int edad, int telefono, String direccion, int rango) {
-            if (rango==1){
-        return new PersonaVendedor(nombres, Apellidos, 0, 0, direccion, 0);
+    public Persona crearPersona(String nombres, String Apellidos, int edad, int telefono, String direccion, String rango) {
+        
+        
+        if ((rango=="Vendedor")||(rango=="vendedor")){
+        return new PersonaVendedor(nombres, Apellidos, edad, telefono, direccion, rango);
     }
-else if (rango==2){
-            return new PersonaBodeguero(nombres, Apellidos, 0, 0, direccion, 0);
+else if ((rango=="Bodeguero")||(rango=="Bodeguero")){
+            return new PersonaBodeguero(nombres, Apellidos, edad, telefono, direccion, rango);
+                    }
+else if ((rango=="Administrador")||(rango=="administrador")){
+            return new administrador(nombres, Apellidos, edad, telefono, direccion, rango);
                     }
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

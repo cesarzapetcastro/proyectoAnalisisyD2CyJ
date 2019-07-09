@@ -12,5 +12,5 @@ import com.mycompany.depositodeagua.Persona;
  * @author MicroSistemas
  */
 public interface PersonaFactoryMethod {
-    public Persona crearPersona (String nombres, String Apellidos, int edad, int telefono, String direccion,int rango);
+    public Persona crearPersona (String nombres, String Apellidos, int edad, int telefono, String direccion,String rango);
 }

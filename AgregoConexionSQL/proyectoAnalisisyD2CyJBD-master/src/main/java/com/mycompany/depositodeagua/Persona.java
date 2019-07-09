@@ -15,13 +15,13 @@ public abstract class Persona {
     private int edad;
     private int telefono;
     private String direccion;
-    private int rango;
+    private String rango;
 
-    public int getRango() {
+    public String getRango() {
         return rango;
     }
 
-    public void setRango(int rango) {
+    public void setRango(String rango) {
         this.rango = rango;
     }
 
@@ -65,7 +65,7 @@ public abstract class Persona {
         this.direccion = direccion;
     }
 
-    public Persona(String nombres, String Apellidos, int edad, int telefono, String direccion,int rango) {
+    public Persona(String nombres, String Apellidos, int edad, int telefono, String direccion,String rango) {
         setNombres(nombres);
         setApellidos(Apellidos);
         setEdad(edad);         

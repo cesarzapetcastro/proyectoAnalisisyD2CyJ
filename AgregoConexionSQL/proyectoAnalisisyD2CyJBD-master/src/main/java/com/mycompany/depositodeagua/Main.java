@@ -26,7 +26,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         PersonaFactoryMethod fabrica = new PersonaFactory ();
-        Persona persona = fabrica.crearPersona("cesar", "zapet", 0, 0, "direccion",2);
+        Persona persona = fabrica.crearPersona("cesar", "zapet", 0, 0, "direccion","administrador");
         System.out.println(persona.getDescripcion());
         
         ProductoFactoryMethod agregaproducto = (ProductoFactoryMethod) new ProductoFactory ();

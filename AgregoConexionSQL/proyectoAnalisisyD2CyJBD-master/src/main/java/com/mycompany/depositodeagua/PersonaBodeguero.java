@@ -13,7 +13,7 @@ import com.mycompany.depositodeagua.Persona;
  */
 public class PersonaBodeguero extends Persona{
     
-    public PersonaBodeguero(String nombres, String Apellidos, int edad, int telefono, String direccion,int rango) {
+    public PersonaBodeguero(String nombres, String Apellidos, int edad, int telefono, String direccion,String rango) {
         super(nombres, Apellidos, edad, telefono, direccion, rango);
     }
 
