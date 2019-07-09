@@ -29,6 +29,10 @@ public class Main {
         Persona persona = fabrica.crearPersona("cesar", "zapet", 0, 0, "direccion",2);
         System.out.println(persona.getDescripcion());
         
+        ProductoFactoryMethod agregaproducto = (ProductoFactoryMethod) new ProductoFactory ();
+        Producto producto = agregaproducto.CrearProducto("Coca_cola", "Producto a base de cola", "Coca_Cola");
+        System.out.println(producto.getInforme());
+        
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("depositoagua");
         EntityManager em = emf.createEntityManager();
         
