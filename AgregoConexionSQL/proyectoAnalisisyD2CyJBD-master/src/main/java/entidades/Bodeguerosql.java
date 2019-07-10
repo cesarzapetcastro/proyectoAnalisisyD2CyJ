@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.depositodeagua;
+package entidades;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -25,6 +25,19 @@ import javax.persistence.Table;
     @NamedQuery(name = "Bodeguerosql.findById", query = "SELECT b FROM Bodeguerosql b WHERE b.id = :id"),
     @NamedQuery(name = "Bodeguerosql.findByNombre", query = "SELECT b FROM Bodeguerosql b WHERE b.nombre = :nombre")})
 public class Bodeguerosql implements Serializable {
+
+    @Column(name = "nombres")
+    private String nombres;
+    @Column(name = "apellidos")
+    private String apellidos;
+    @Column(name = "edad")
+    private Integer edad;
+    @Column(name = "telefono")
+    private Integer telefono;
+    @Column(name = "dieccion")
+    private String dieccion;
+    @Column(name = "rango")
+    private String rango;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -80,6 +93,54 @@ public class Bodeguerosql implements Serializable {
     @Override
     public String toString() {
         return "com.mycompany.depositodeagua.Bodeguerosql[ id=" + id + "  nombre = " + nombre + " ]";
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    public void setEdad(Integer edad) {
+        this.edad = edad;
+    }
+
+    public Integer getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(Integer telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDieccion() {
+        return dieccion;
+    }
+
+    public void setDieccion(String dieccion) {
+        this.dieccion = dieccion;
+    }
+
+    public String getRango() {
+        return rango;
+    }
+
+    public void setRango(String rango) {
+        this.rango = rango;
     }
     
 }

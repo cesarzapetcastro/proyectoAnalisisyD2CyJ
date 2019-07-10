@@ -5,6 +5,9 @@
  */
 package com.mycompany.depositodeagua;
 
+import entidades.Vendedorsql;
+import entidades.Bodeguerosql;
+import entidades.Administradorsql;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -25,13 +28,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        PersonaFactoryMethod fabrica = new PersonaFactory ();
-        Persona persona = fabrica.crearPersona("cesar", "zapet", 0, 0, "direccion","administrador");
-        System.out.println(persona.getDescripcion());
+
+     //   System.out.println(persona.getDescripcion());
         
-        ProductoFactoryMethod agregaproducto = (ProductoFactoryMethod) new ProductoFactory ();
-        Producto producto = agregaproducto.CrearProducto("Coca_cola", "Producto a base de cola", "Coca_Cola");
-        System.out.println(producto.getInforme());
+    //    ProductoFactoryMethod agregaproducto = (ProductoFactoryMethod) new ProductoFactory ();
+      //  Producto producto = agregaproducto.CrearProducto("Coca_cola", "Producto a base de cola", "Coca_Cola");
+      //  System.out.println(producto.getInforme());
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("depositoagua");
         EntityManager em = emf.createEntityManager();
@@ -54,7 +56,7 @@ public class Main {
         for (Vendedorsql tp : listaVendedor) {
             System.out.println(tp);
         }
-        em.close();
+       // em.close();
         ;
     }
     
