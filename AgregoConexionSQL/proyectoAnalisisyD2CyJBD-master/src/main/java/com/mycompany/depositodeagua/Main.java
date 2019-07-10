@@ -41,23 +41,23 @@ public class Main {
         TypedQuery<Administradorsql> queryadmin = em.createNamedQuery("Administradorsql.findAll", Administradorsql.class);
         List<Administradorsql> listaAdmin = queryadmin.getResultList();
 
-        TypedQuery<Bodeguerosql> querybodeguero = em.createNamedQuery("Bodeguerosql.findAll", Bodeguerosql.class);
-        List<Bodeguerosql> listaBodeguero = querybodeguero.getResultList();
+       // TypedQuery<Bodeguerosql> querybodeguero = em.createNamedQuery("Bodeguerosql.findAll", Bodeguerosql.class);
+     //   List<Bodeguerosql> listaBodeguero = querybodeguero.getResultList();
         
-        TypedQuery<Vendedorsql> queryvendedor = em.createNamedQuery("Vendedorsql.findAll", Vendedorsql.class);
-        List<Vendedorsql> listaVendedor = queryvendedor.getResultList();
+     //   TypedQuery<Vendedorsql> queryvendedor = em.createNamedQuery("Vendedorsql.findAll", Vendedorsql.class);
+     //   List<Vendedorsql> listaVendedor = queryvendedor.getResultList();
         
         for (Administradorsql tp : listaAdmin) {
             System.out.println(tp);
         }
-        for (Bodeguerosql tp : listaBodeguero) {
-            System.out.println(tp);
-        }
-        for (Vendedorsql tp : listaVendedor) {
-            System.out.println(tp);
-        }
+       // for (Bodeguerosql tp : listaBodeguero) {
+       //     System.out.println(tp);
+        //}
+      //  for (Vendedorsql tp : listaVendedor) {
+        //    System.out.println(tp);
+      //  }
        // em.close();
-        ;
+        
     }
     
 }

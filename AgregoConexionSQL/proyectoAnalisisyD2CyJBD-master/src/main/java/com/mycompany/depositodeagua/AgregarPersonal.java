@@ -8,7 +8,9 @@ package com.mycompany.depositodeagua;
 import com.mycompany.depositodeagua.Persona;
 import com.mycompany.depositodeagua.PersonaFactory;
 import com.mycompany.depositodeagua.PersonaFactoryMethod;
-
+import controlador.VendedorsqlJpaController;
+import  entidades.Vendedorsql;
+import javax.crypto.AEADBadTagException;
 /**
  *
  * @author MicroSistemas
@@ -141,6 +143,7 @@ public class AgregarPersonal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+       
         String vNombres,vApellidos,vDireccion,vRango;
         int vEdad,vTelefono;
         vNombres=jTextField1.getText();
@@ -151,7 +154,15 @@ public class AgregarPersonal extends javax.swing.JFrame {
         vRango=jTextField6.getText();
          PersonaFactoryMethod fabrica = new PersonaFactory ();
         Persona persona = fabrica.crearPersona(vNombres,vApellidos, vEdad, vTelefono, vDireccion,vRango);
-       
+         try {
+             Vendedorsql a = new Vendedorsql();
+             a.getApellidos(jTextField1.getText());
+            VendedorsqlJpaController v = new VendedorsqlJpaController();
+            v.create(a);
+        } catch (Exception e) {
+        }
+ 
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
